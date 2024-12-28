@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="581.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignupController">
+    <children>
+        <AnchorPane layoutX="-7.0" prefHeight="72.0" prefWidth="590.0" style="-fx-background-color: #FF4500;">
+            <children>
+                <ImageView fitHeight="72.0" fitWidth="65.0" layoutX="21.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@delivery-service-logo-design-template-vector-16303784-removebg-preview.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="88.0" layoutY="25.0" text="ĐĂNG KÝ TÀI KHOẢN" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Label layoutX="17.0" layoutY="89.0" text="User ID">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="18.0" layoutY="124.0" text="Password">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="30.0" layoutY="157.0" text="Họ">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="191.0" text="Tên Đệm">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="28.0" layoutY="229.0" text="Tên">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="9.0" layoutY="269.0" text="Ngày sinh">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="userIDTextField" layoutX="77.0" layoutY="85.0" promptText="UserID" />
+        <TextField fx:id="passwordTextField" layoutX="77.0" layoutY="120.0" promptText="Password" />
+        <TextField fx:id="lastnameTextField" layoutX="77.0" layoutY="153.0" promptText="Họ" />
+        <TextField fx:id="middlenameTextField" layoutX="77.0" layoutY="187.0" promptText="Tên đệm" />
+        <TextField fx:id="firstnameTextField" layoutX="77.0" layoutY="225.0" promptText="Tên" />
+        <TextField fx:id="birthdayTextField" layoutX="77.0" layoutY="265.0" promptText="yyyy-MM-dd" />
+        <Label layoutX="311.0" layoutY="89.0" text="Giới tính">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="319.0" layoutY="124.0" text="Phone">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="294.0" layoutY="157.0" text="Thành phố/Tỉnh">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="302.0" layoutY="191.0" text="Quận/Huyện">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="306.0" layoutY="229.0" text="Phường/Xã">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="318.0" layoutY="269.0" text="Địa chỉ">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="genderTextField" layoutX="395.0" layoutY="85.0" promptText="Nam/Nữ" />
+        <TextField fx:id="phoneTextField" layoutX="395.0" layoutY="120.0" promptText="Số điện thoại" />
+        <TextField fx:id="cityTextField" layoutX="395.0" layoutY="153.0" promptText="Thành phố/Tỉnh" />
+        <TextField fx:id="districtTextField" layoutX="395.0" layoutY="187.0" promptText="Quận/Huyện" />
+        <TextField fx:id="wareTextField" layoutX="395.0" layoutY="225.0" promptText="Phường/Xã" />
+        <TextField fx:id="addressTextField" layoutX="395.0" layoutY="265.0" promptText="Địa chỉ cụ thể" />
+        <Button fx:id="signupButton" layoutX="235.0" layoutY="317.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: #32CD32;" text="ĐĂNG KÝ" textFill="WHITE" onAction="#handleSignupButtonAction">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Button>
+        <Label fx:id="errorSignup" layoutX="194.0" layoutY="358.0" text="Thông báo lỗi - Vui lòng thử lại" textFill="RED" visible="false">
+            <font>
+                <Font name="System Bold Italic" size="13.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
+
+
+
+
+
+

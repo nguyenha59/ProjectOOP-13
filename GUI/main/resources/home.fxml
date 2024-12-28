@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;">
+
+    <!-- Thêm một Label ở giữa màn hình -->
+    <Label text="Welcome to the Home Page" layoutX="200" layoutY="100" style="-fx-font-size: 24; -fx-text-fill: black;"/>
+
+    <!-- Thêm một Button để chuyển trang hoặc thực hiện hành động -->
+    <Button text="Go to Settings" layoutX="250" layoutY="200" fx:id="goToSettingsButton"/>
+
+</AnchorPane>
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.paint.Color?>
+
+<AnchorPane prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserListController">
+    <children>
+        <!-- Tiêu đề danh sách người dùng -->
+        <Label layoutX="20.0" layoutY="20.0" text="Danh Sách Người Dùng" textFill="#333333">
+            <font>
+                <Font name="Arial" size="22.0" />
+            </font>
+        </Label>
+
+        <!-- Bảng danh sách người dùng -->
+        <TableView fx:id="userTable" layoutX="20.0" layoutY="50.0" prefHeight="300.0" prefWidth="600.0" style="-fx-background-color: #f4f4f4; -fx-border-color: #ccc; -fx-border-radius: 5px;">
+            <columns>
+                <TableColumn fx:id="colUserID" text="User ID" prefWidth="100.0" />
+                <TableColumn fx:id="colLastName" text="Last Name" prefWidth="150.0" />
+                <TableColumn fx:id="colMiddleName" text="Middle Name" prefWidth="150.0" />
+                <TableColumn fx:id="colFirstName" text="First Name" prefWidth="150.0" />
+                <TableColumn fx:id="colPhone" text="Phone" prefWidth="100.0" />
+                <TableColumn fx:id="colCity" text="City" prefWidth="100.0" />
+                <TableColumn fx:id="colAddress" text="Address" prefWidth="150.0" />
+            </columns>
+        </TableView>
+
+        <!-- Nút Quay lại -->
+        <Button fx:id="refreshButton" layoutX="20.0" layoutY="370.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="120.0" style="-fx-background-color: #32CD32; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.0, 2, 2);">
+            <font>
+                <Font name="Arial" size="14.0" />
+            </font>
+        </Button>
+
+        <!-- Thông báo nếu không có người dùng -->
+        <Label fx:id="noUsersLabel" alignment="CENTER" layoutX="20.0" layoutY="40.0" prefHeight="18.0" prefWidth="560.0" text="Không có người dùng nào trong danh sách" textFill="red" visible="false">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
+
