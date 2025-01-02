@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import java.io.IOException;
 
@@ -47,6 +48,18 @@ public class AdminHomeController {
         // Tải tệp FXML mới (ví dụ, quay lại màn hình chính)
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/service.fxml"));
         AnchorPane root = loader.load();
+
+        // Lấy stage hiện tại và thay đổi cảnh
+        Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));  // Chuyển đổi cảnh
+        stage.show();
+    }
+    @FXML
+    private void handleOrder(ActionEvent event) throws IOException {
+
+        // Tải tệp FXML mới (ví dụ, quay lại màn hình chính)
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/order.fxml"));
+        BorderPane root = loader.load();
 
         // Lấy stage hiện tại và thay đổi cảnh
         Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
