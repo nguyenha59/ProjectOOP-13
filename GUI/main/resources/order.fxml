@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderController">
+
+    <!-- Top section: Title -->
+    <top>
+        <Label text="Order Management" style="-fx-font-size: 18px; -fx-font-weight: bold;" BorderPane.alignment="CENTER" />
+    </top>
+
+    <!-- Center section: TableView -->
+    <center>
+        <TableView fx:id="orderTable">
+            <columns>
+                <TableColumn fx:id="orderIdCol" text="Order ID" />
+                <TableColumn fx:id="customerNameCol" text="Customer Name" />
+                <TableColumn fx:id="productCol" text="Product" />
+                <TableColumn fx:id="quantityCol" text="Quantity" />
+            </columns>
+        </TableView>
+    </center>
+
+    <!-- Bottom section: Input fields and buttons -->
+    <bottom>
+        <VBox spacing="10" alignment="CENTER" BorderPane.alignment="CENTER">
+            <GridPane hgap="10" vgap="10">
+                <Label text="Order ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="orderIdField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label text="Customer Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="customerNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Product:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="productField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Quantity:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <TextField fx:id="quantityField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            </GridPane>
+
+            <HBox spacing="10" alignment="CENTER">
+                <Button fx:id="addButton" text="Add" onAction="#handleAdd" />
+                <Button fx:id="editButton" text="Edit" onAction="#handleEdit" />
+                <Button fx:id="deleteButton" text="Delete" onAction="#handleDelete" />
+            </HBox>
+        </VBox>
+    </bottom>
+
+</BorderPane>
